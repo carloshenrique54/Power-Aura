@@ -2,40 +2,90 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 32px;
+  padding: 14px 32px;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-primary);
   position: sticky;
   top: 0;
   z-index: 100;
+  gap: 20px;
 }
 
 .app-header .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--red-600), var(--red-700));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 0 12px var(--red-glow);
 }
 
 .app-header .logo-text {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1px;
-  background: linear-gradient(135deg, var(--red-400), var(--red-600));
+  background: linear-gradient(135deg, var(--red-400), #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  line-height: 1.1;
 }
 
 .app-header .header-subtitle {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-muted);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-primary);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-primary);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.nav-item.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--red-600), var(--red-700));
+  font-weight: 600;
+  box-shadow: 0 0 12px var(--red-glow);
+}
+
 .header-stats {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   align-items: center;
 }
 
@@ -43,7 +93,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
@@ -65,10 +115,22 @@
   .app-header {
     padding: 12px 16px;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-item {
+    flex: 1;
+    justify-content: center;
   }
 
   .header-stats {
     gap: 10px;
+    width: 100%;
+    justify-content: center;
   }
 }

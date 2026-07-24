@@ -17,7 +17,7 @@ function formatarData(dataISO) {
   })
 }
 
-function ListaPersonagens({
+function Lista({
   personagens,
   busca,
   setBusca,
@@ -31,6 +31,16 @@ function ListaPersonagens({
     if (!termo) return personagens
     return personagens.filter((p) => p.nome?.toLowerCase().includes(termo))
   }, [busca, personagens])
+
+  const maxStat = useMemo(() => {
+    let max = 100
+    personagens.forEach((p) => {
+      if (Number(p.poder) > max) max = Number(p.poder)
+      if (Number(p.ataque) > max) max = Number(p.ataque)
+      if (Number(p.defesa) > max) max = Number(p.defesa)
+    })
+    return max
+  }, [personagens])
 
   return (
     <section className="panel-lista">
@@ -143,7 +153,9 @@ function ListaPersonagens({
                 <div className="stat-bar">
                   <div
                     className="stat-fill stat-fill-poder"
-                    style={{ width: `${Math.min(100, Number(p.poder) || 0)}%` }}
+                    style={{
+                      width: `${Math.min(100, Math.max(0, ((Number(p.poder) || 0) / maxStat) * 100))}%`,
+                    }}
                   />
                 </div>
                 <div className="stat-value">{p.poder ?? "—"}</div>
@@ -154,7 +166,7 @@ function ListaPersonagens({
                   <div
                     className="stat-fill stat-fill-ataque"
                     style={{
-                      width: `${Math.min(100, Number(p.ataque) || 0)}%`,
+                      width: `${Math.min(100, Math.max(0, ((Number(p.ataque) || 0) / maxStat) * 100))}%`,
                     }}
                   />
                 </div>
@@ -166,7 +178,7 @@ function ListaPersonagens({
                   <div
                     className="stat-fill stat-fill-defesa"
                     style={{
-                      width: `${Math.min(100, Number(p.defesa) || 0)}%`,
+                      width: `${Math.min(100, Math.max(0, ((Number(p.defesa) || 0) / maxStat) * 100))}%`,
                     }}
                   />
                 </div>
@@ -184,4 +196,4 @@ function ListaPersonagens({
   )
 }
 
-export default ListaPersonagens
+export default Lista

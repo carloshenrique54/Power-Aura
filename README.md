@@ -1,17 +1,18 @@
-# React + Vite
+# Power Aura
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portal de Caçapava para cadastro de personagens e gerenciamento do Torneio de Poder.
 
-Currently, two official plugins are available:
+## Banco de dados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto usa as tabelas já existentes `personagens`, `confrontos` e `votacoes_favorito` do Supabase. Não há criação de tabelas nem configuração de RLS no código.
 
-## React Compiler
+O projeto espera as variáveis `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` no arquivo `.env`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Executar
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# Power-Aura
+Na aba **Torneio**, gere e confirme uma batalha para registrar o confronto. A tela **Confrontos e ranking** oferece busca por personagem, ranking por vitórias, gráfico, votação popular e exportação CSV.

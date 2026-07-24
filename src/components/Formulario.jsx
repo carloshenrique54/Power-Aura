@@ -201,9 +201,8 @@ function Formulario({ onSalvar, editando, onCancelarEdicao, mostrarToast }) {
               type="number"
               name="poder"
               className="form-input"
-              placeholder="0-100"
+              placeholder="Ex: 8000"
               min="0"
-              max="100"
               value={form.poder}
               onChange={handleChange}
             />
@@ -214,9 +213,8 @@ function Formulario({ onSalvar, editando, onCancelarEdicao, mostrarToast }) {
               type="number"
               name="ataque"
               className="form-input"
-              placeholder="0-100"
+              placeholder="Ex: 8000"
               min="0"
-              max="100"
               value={form.ataque}
               onChange={handleChange}
             />
@@ -227,9 +225,8 @@ function Formulario({ onSalvar, editando, onCancelarEdicao, mostrarToast }) {
               type="number"
               name="defesa"
               className="form-input"
-              placeholder="0-100"
+              placeholder="Ex: 8000"
               min="0"
-              max="100"
               value={form.defesa}
               onChange={handleChange}
             />

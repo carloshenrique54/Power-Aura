@@ -1,0 +1,38 @@
+.torneio-container { width: min(1240px, 100%); margin: 0 auto; padding: 32px; flex: 1; }
+.torneio-header { max-width: 700px; margin: 0 auto 26px; text-align: center; }
+.torneio-title { display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 30px; margin-bottom: 8px; background: linear-gradient(135deg, #fff, var(--red-400)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.torneio-title i { color: var(--red-500); }
+.torneio-subtitle, .card-heading p, .form-hint { color: var(--text-muted); font-size: 13px; line-height: 1.55; }
+.torneio-tabs { display: flex; gap: 8px; width: fit-content; margin: 0 auto 22px; padding: 4px; border: 1px solid var(--border-primary); border-radius: var(--radius-md); background: var(--bg-secondary); }
+.torneio-tabs button { border: 0; background: transparent; color: var(--text-secondary); border-radius: var(--radius-sm); padding: 10px 14px; cursor: pointer; font-weight: 600; }
+.torneio-tabs button.active { background: linear-gradient(135deg, var(--red-600), var(--red-700)); color: #fff; }
+.setup-card, .arena-card { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: var(--radius-lg); box-shadow: var(--shadow-elevated); padding: 26px; }
+.battle-layout { display: grid; grid-template-columns: minmax(330px, .88fr) minmax(420px, 1.12fr); gap: 22px; align-items: start; }
+.setup-title, .card-heading h2 { color: var(--text-primary); font-size: 17px; margin: 0 0 8px; }
+.setup-title { display: flex; gap: 9px; align-items: center; font-weight: 700; }
+.form-hint { margin-bottom: 20px; }
+.form-fields-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+.confronto-form .btn-primary { width: 100%; margin-top: 2px; }
+.arena-card { min-height: 500px; }
+.arena-placeholder, .estado-vazio { min-height: 400px; display: grid; place-content: center; text-align: center; gap: 12px; color: var(--text-muted); }
+.arena-placeholder i, .estado-vazio > i { color: var(--red-500); font-size: 42px; }
+.arena-placeholder h2, .estado-vazio h1 { color: var(--text-primary); }
+.estado-vazio .btn-primary { text-decoration: none; margin: 12px auto 0; }
+.round-badge { display: table; margin: 0 auto 20px; color: var(--red-300); background: var(--red-glow); border: 1px solid var(--red-600); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .7px; }
+.confronto-container { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.lutador-card { padding: 20px; text-align: center; border: 1px solid var(--border-primary); background: var(--bg-secondary); border-radius: var(--radius-md); transition: .2s ease; }
+.lutador-card.vencedor { border-color: var(--red-500); box-shadow: 0 0 22px var(--red-glow); }
+.lutador-avatar { width: 88px; height: 88px; display: grid; place-items: center; margin: 0 auto 10px; overflow: hidden; border: 3px solid var(--border-primary); border-radius: 50%; background: linear-gradient(135deg, var(--red-600), var(--red-700)); color: #fff; font-size: 30px; font-weight: 800; }.lutador-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.lutador-nome { margin: 0; font-size: 16px; }.lutador-anime { margin: 4px 0 16px; color: var(--red-400); font-size: 12px; }
+.lutador-stats-grid { margin-bottom: 15px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: var(--bg-primary); padding: 10px; }
+.lutador-stat-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 12px; color: var(--text-muted); }.lutador-stat-row strong { color: var(--text-primary); font-family: 'JetBrains Mono', monospace; }.lutador-stat-row.total { margin-top: 4px; border-top: 1px solid var(--border-subtle); color: var(--red-400); }.lutador-stat-row.total strong { color: var(--red-400); }
+.lutador-card .btn-secondary { width: 100%; padding: 9px; }
+.resultado-batalha { text-align: center; margin: 18px 0 14px; padding: 12px; background: var(--red-glow); color: var(--red-300); border-radius: var(--radius-sm); }.resultado-batalha i { color: #eab308; margin-right: 6px; }.salvar-confronto { display: block; width: fit-content; margin: auto; }
+.resultados-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 22px; }.extras-card { grid-column: 1 / -1; }
+.card-heading { display: flex; justify-content: space-between; align-items: start; gap: 14px; margin-bottom: 18px; }.card-heading h2 { margin-bottom: 4px; }.card-heading .btn-secondary { white-space: nowrap; padding: 9px 12px; }
+.ranking-list, .historico-list, .votacao-list, .grafico-list { display: flex; flex-direction: column; gap: 9px; }.ranking-item { display: flex; align-items: center; gap: 10px; padding: 10px; border-bottom: 1px solid var(--border-subtle); }.ranking-posicao { width: 25px; color: var(--red-400); font-family: 'JetBrains Mono', monospace; font-weight: 700; }.ranking-nome { flex: 1; display: grid; gap: 2px; font-size: 13px; }.ranking-nome span { color: var(--text-muted); font-size: 11px; }.ranking-vitorias { color: var(--red-300); font-size: 12px; }
+.historico-card .search-wrapper { margin-bottom: 16px; }.historico-item { display: flex; justify-content: space-between; gap: 18px; padding: 14px; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); }.historico-item > div:first-child { min-width: 0; }.historico-item strong { font-size: 13px; }.historico-item strong span, .historico-item p, .historico-item em { color: var(--text-muted); font-size: 12px; }.historico-item p { margin: 7px 0; }.historico-item em { display: block; color: var(--text-secondary); }.historico-vencedor { text-align: right; white-space: nowrap; display: grid; align-content: start; gap: 3px; }.historico-vencedor span { color: var(--text-muted); font-size: 10px; text-transform: uppercase; }.historico-vencedor strong { color: var(--red-300); }.empty-text { color: var(--text-muted); font-size: 13px; padding: 15px 0; text-align: center; }
+.extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }.extras-grid h3 { font-size: 14px; margin: 0 0 14px; }.extras-grid h3 i { color: var(--red-400); margin-right: 5px; }.voto-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: var(--bg-input); color: var(--text-primary); text-align: left; cursor: pointer; }.voto-item:hover { border-color: var(--red-600); }.voto-item strong { color: var(--red-300); font-size: 12px; }.grafico-item > div:first-child { display: flex; justify-content: space-between; margin-bottom: 5px; color: var(--text-secondary); font-size: 12px; }.grafico-item strong { color: var(--red-300); }.grafico-trilho { height: 7px; overflow: hidden; border-radius: 99px; background: var(--bg-primary); }.grafico-trilho span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--red-700), var(--red-400)); transition: width .4s ease; }
+.erro-torneio { margin: 0 0 20px; }.erro-torneio code { color: #fff; }.toast { z-index: 1000; }
+@media (max-width: 900px) { .battle-layout, .resultados-layout, .extras-grid { grid-template-columns: 1fr; }.extras-card { grid-column: auto; } }
+@media (max-width: 620px) { .torneio-container { padding: 18px 14px; }.torneio-title { font-size: 24px; }.form-fields-grid, .confronto-container { grid-template-columns: 1fr; }.setup-card, .arena-card { padding: 18px; }.torneio-tabs { width: 100%; }.torneio-tabs button { flex: 1; padding: 9px 6px; font-size: 12px; }.historico-item { flex-direction: column; }.historico-vencedor { text-align: left; }.card-heading { flex-direction: column; } }
