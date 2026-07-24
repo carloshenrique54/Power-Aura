@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #161616;
+  --bg-input: #1a1a1a;
+  --bg-hover: #1e1e1e;
+  --border-primary: #2a2a2a;
+  --border-subtle: #222222;
+  --text-primary: #e8e8e8;
+  --text-secondary: #999999;
+  --text-muted: #666666;
+  --red-500: #dc2626;
+  --red-600: #b91c1c;
+  --red-700: #991b1b;
+  --red-400: #f87171;
+  --red-300: #fca5a5;
+  --red-glow: rgba(220, 38, 38, 0.15);
+  --red-glow-strong: rgba(220, 38, 38, 0.3);
+  --success: #22c55e;
+  --warning: #eab308;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --transition: 0.2s ease;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
